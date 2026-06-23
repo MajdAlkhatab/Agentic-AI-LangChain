@@ -48,3 +48,5 @@ python trip_planner.py
 ```
 
 The agent will read the prompt inside the script, delegate the research to the sub-agents, and print a complete, budget-conscious travel plan to your terminal. 
+
+You can deploy it for free on Railway or GitHub Actions, and receive the plan as a Telegram message.
