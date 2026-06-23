@@ -40,7 +40,7 @@ It is better to use await when communicating with external systems like servers 
 **state:** is a memory that stores the conversion history and custom fields (variables with values).
 
 
-**MCP Server Directories**:
+* **MCP Server Directories**:
     * [Awesome MCP Servers (GitHub)](https://github.com/punkpeye/awesome-mcp-servers)
     * [Glama MCP Servers](https://glama.ai/mcp/servers)
     * [MCP.so](https://mcp.so/)
