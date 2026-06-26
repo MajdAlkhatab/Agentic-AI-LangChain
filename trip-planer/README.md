@@ -15,38 +15,52 @@ The model is simple. We have one main agent and multiple sub-agents. The sub-age
 
 All of these agents are orchestrated by a **Main Agent**, which gathers the constraints, delegates the tasks, and compiles the final itinerary.
 
+
 ### How to use it
 
 To run it, you only need to install the dependencies and provide your API keys.
 
 **Requirements:**
-
 * A [Tavily API Key](https://tavily.com/) for web search capabilities.
-* An [OpenAI API Key](https://platform.openai.com/) (defaults to `gpt-5-nano`).
+* An [OpenAI API Key](https://platform.openai.com/) (defaults to `gpt-4o-mini`).
 
-**1. Install dependencies**
+**1. Create a virtual environment**
 
+Mac/Linux:
 ```bash
-pip install -r requirements.txt
-
+python -m venv venv && source venv/bin/activate
+```
+Windows (Git Bash):
+```bash
+python -m venv venv && source venv/Scripts/activate
 ```
 
-**2. Set up your environment variables**
-Create a file named `.env` similar to `.env.example` in the root folder and add your keys:
+**2. Install dependencies**
+```bash
+python -m pip install -r requirements.txt
+```
 
+**3. Set up your environment variables**
+
+Copy `.env.example` to `.env` and add your keys:
+
+Mac/Linux:
+```bash
+cp .env.example .env
+```
+Windows:
+```bash
+copy .env.example .env
+```
 ```text
 OPENAI_API_KEY='*****'
 TAVILY_API_KEY='*****'
-
 ```
 
-**3. Run the agent**
-
+**4. Run the agent**
 ```bash
 python trip_planner.py
-
 ```
 
-The agent will read the prompt inside the script, delegate the research to the sub-agents, and print a complete, budget-conscious travel plan to your terminal. 
-
+The agent will read the prompt inside the script, delegate the research to the sub-agents, and print a complete, budget-conscious travel plan to your terminal.
 You can deploy it for free on Railway or GitHub Actions, and receive the plan as a Telegram message.
